@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>StudentManagementSystem</display-name>
+ 
+ <!-- adding student -->
+ <servlet>
+ <servlet-name>adding</servlet-name>
+ <servlet-class>StudentManagement.AddStudentServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>adding</servlet-name>
+ <url-pattern>/addstudent</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- deleteing student -->
+ <servlet>
+ <servlet-name>delete</servlet-name>
+ <servlet-class>StudentManagement.DeleteServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>delete</servlet-name>
+ <url-pattern>/deletestudent</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- updating student data -->
+  <servlet>
+ <servlet-name>data</servlet-name>
+ <servlet-class>StudentManagement.UpdateServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>data</servlet-name>
+ <url-pattern>/updatestudent</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- viewing student -->
+  <servlet>
+ <servlet-name>view</servlet-name>
+ <servlet-class>StudentManagement.ViewServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>view</servlet-name>
+ <url-pattern>/selectstudent</url-pattern>
+ </servlet-mapping>
+ 
+</web-app>
