@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>OnlineLibraryManagement</display-name>
+
+<!--adminloginservlet conf-->
+<servlet>
+<servlet-name>adminlogin</servlet-name>
+<servlet-class>LibraryManagement.AdminLoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>adminlogin</servlet-name>
+<url-pattern>/adminlogin</url-pattern>
+</servlet-mapping>
+
+
+<!-- logout from admin session -->
+<servlet>
+<servlet-name>logout</servlet-name>
+<servlet-class>LibraryManagement.LogOutServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>logout</servlet-name>
+<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+
+<!-- student login conf -->
+<servlet>
+<servlet-name>login</servlet-name>
+<servlet-class>LibraryManagement.StudentLogin</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>login</servlet-name>
+<url-pattern>/studentlogin</url-pattern>
+</servlet-mapping>
+
+<!-- Student registration -->
+<servlet>
+<servlet-name>registration</servlet-name>
+<servlet-class>LibraryManagement.StudentRegistrationServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>registration</servlet-name>
+<url-pattern>/registration</url-pattern>
+</servlet-mapping>
+
+<!-- viewing all Students who are registered -->
+<servlet>
+<servlet-name>viewing</servlet-name>
+<servlet-class>LibraryManagement.ViewStudentsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>viewing</servlet-name>
+<url-pattern>/viewstudents</url-pattern>
+</servlet-mapping>
+
+<!-- removing student -->
+<servlet>
+<servlet-name>deleting</servlet-name>
+<servlet-class>LibraryManagement.DeleteStudentServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>deleting</servlet-name>
+<url-pattern>/removing</url-pattern>
+</servlet-mapping>
+
+
+<!-- updating student -->
+<servlet>
+<servlet-name>updating</servlet-name>
+<servlet-class>LibraryManagement.UpdateStudentServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>updating</servlet-name>
+<url-pattern>/update</url-pattern>
+</servlet-mapping>
+
+<!-- searching a student -->
+<servlet>
+<servlet-name>searchingstudent</servlet-name>
+<servlet-class>LibraryManagement.SearchStudentServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>searchingstudent</servlet-name>
+<url-pattern>/searching</url-pattern>
+</servlet-mapping>
+
+<!-- adding book -->
+<servlet>
+<servlet-name>addabook</servlet-name>
+<servlet-class>LibraryManagement.AddBookServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>addabook</servlet-name>
+<url-pattern>/addingbook</url-pattern>
+</servlet-mapping>
+
+<!-- viewing all books -->
+<servlet>
+<servlet-class>LibraryManagement.ViewBooksServlet</servlet-class>
+<servlet-name>viewbook</servlet-name>
+</servlet>
+<servlet-mapping>
+<url-pattern>/viewbooks</url-pattern>
+<servlet-name>viewbook</servlet-name>
+</servlet-mapping>
+
+<!-- deleting books -->
+<servlet>
+<servlet-class>LibraryManagement.DeleteBookServlet</servlet-class>
+<servlet-name>dbook</servlet-name>
+</servlet>
+<servlet-mapping>
+<url-pattern>/deletebook</url-pattern>
+<servlet-name>dbook</servlet-name>
+</servlet-mapping>
+
+<!-- Updating books -->
+<servlet>
+<servlet-class>LibraryManagement.UpdateBookServlet</servlet-class>
+<servlet-name>ubook</servlet-name>
+</servlet>
+<servlet-mapping>
+<url-pattern>/updatingbooks</url-pattern>
+<servlet-name>ubook</servlet-name>
+</servlet-mapping>
+
+<!-- Searching books -->
+<servlet>
+<servlet-class>LibraryManagement.SearchBookServlet</servlet-class>
+<servlet-name>sbook</servlet-name>
+</servlet>
+<servlet-mapping>
+<url-pattern>/searchingbooks</url-pattern>
+<servlet-name>sbook</servlet-name>
+</servlet-mapping>
+</web-app>
